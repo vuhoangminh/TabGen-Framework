@@ -100,9 +100,6 @@ TabGen-Framework/
 │   ├── perform_friedman_nemenyi_test.py # §3.5 — Friedman–Nemenyi statistical tests
 │   ├── envs/setup.sh                    # Environment installation script
 │   └── apptainer/biobank.def           # HPC container definition (Apptainer/Singularity)
-│
-└── docs/
-    └── 5019_A_Unified_Framework_for_T.pdf   # Published paper
 ```
 
 ---
@@ -185,18 +182,18 @@ python -W ignore scripts/main_technical_paper.py \
 
 **Key arguments:**
 
-| Argument | Description | Choices / Default |
-| --- | --- | --- |
-| `--arch` | DGM architecture | `ctgan`, `tvae`, `copulagan`, `dpcgans`, `ctab` |
-| `--dataset` | Dataset name | e.g., `adult`, `abalone`, `credit`, `mnist12` |
-| `--loss_version` | Loss function variant | `0` (vanilla), `2` (correlation + distribution), `4` (correlation only), `5` (distribution only) |
-| `--is_condvec` | Enable conditional vector | `1` (enabled), `0` (disabled) |
-| `--is_loss_corr` | Weight α for correlation loss | float, default `1.0` |
-| `--is_loss_dwp` | Weight β for distribution loss | float, default `1.0` |
-| `--n_moment_loss_dwp` | Number of moments H | `1`–`4`, default `4` |
-| `--epochs` | Training epochs | default `10000` |
-| `--batch_size` | Batch size | default `16000` |
-| `--is_test` | Quick test mode (2000 rows, 100 epochs) | `1` (test), `0` (full) |
+| Argument              | Description                             | Choices / Default                                                                                |
+|-----------------------|-----------------------------------------|--------------------------------------------------------------------------------------------------|
+| `--arch`              | DGM architecture                        | `ctgan`, `tvae`, `copulagan`, `dpcgans`, `ctab`                                                  |
+| `--dataset`           | Dataset name                            | e.g., `adult`, `abalone`, `credit`, `mnist12`                                                    |
+| `--loss_version`      | Loss function variant                   | `0` (vanilla), `2` (correlation + distribution), `4` (correlation only), `5` (distribution only) |
+| `--is_condvec`        | Enable conditional vector               | `1` (enabled), `0` (disabled)                                                                    |
+| `--is_loss_corr`      | Weight α for correlation loss           | float, default `1.0`                                                                             |
+| `--is_loss_dwp`       | Weight β for distribution loss          | float, default `1.0`                                                                             |
+| `--n_moment_loss_dwp` | Number of moments H                     | `1`–`4`, default `4`                                                                             |
+| `--epochs`            | Training epochs                         | default `10000`                                                                                  |
+| `--batch_size`        | Batch size                              | default `16000`                                                                                  |
+| `--is_test`           | Quick test mode (2000 rows, 100 epochs) | `1` (test), `0` (full)                                                                           |
 
 **Example — Reproduce the vanilla CTGAN baseline on Adult:**
 
@@ -270,13 +267,13 @@ python -W ignore scripts/main_optimize_technical_paper.py \
 
 **Key optimization arguments:**
 
-| Argument | Description | Choices / Default |
-| --- | --- | --- |
-| `--bo_method` | Optimization strategy | `ior` (IORBO), `sbo` (Standard BO) |
-| `--bo_method_agg` | Aggregation for SBO | `mean`, `median` |
-| `--max_trials` | Number of BO iterations | default `30` |
-| `--module` | Evaluation scope | `public` (open data), `gm`, `dp`, `gmdp` |
-| `--is_condvec` | Enable conditional vector | `1` (enabled), `0` (disabled) |
+| Argument          | Description               | Choices / Default                        |
+|-------------------|---------------------------|------------------------------------------|
+| `--bo_method`     | Optimization strategy     | `ior` (IORBO), `sbo` (Standard BO)       |
+| `--bo_method_agg` | Aggregation for SBO       | `mean`, `median`                         |
+| `--max_trials`    | Number of BO iterations   | default `30`                             |
+| `--module`        | Evaluation scope          | `public` (open data), `gm`, `dp`, `gmdp` |
+| `--is_condvec`    | Enable conditional vector | `1` (enabled), `0` (disabled)            |
 
 Optimization results and trial logs are saved under `database/optimization/` (IORBO) or `database/optimization_sbo_<agg>/` (SBO).
 
