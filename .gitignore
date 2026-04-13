@@ -151,3 +151,7 @@ database/dataset/
 !database/dataset/*.pkl
 
 
+
+# Shared Claude session files (symlinked from tools)
+.claude/SESSION_START.md
+.claude/SESSION_UPDATE.md
