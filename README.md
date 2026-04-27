@@ -17,6 +17,11 @@ Official implementation of the paper published in *Transactions on Machine Learn
 > **Looking for the newer work?**
 > This repository is the foundation for a follow-up paper on privacy-preserving synthetic health data. The successor framework — **SecureSynth-Framework** — extends this work with biomedical preprocessing, formal differential privacy, data-sufficiency analysis, rejection sampling, and interactive visualization, validated on the PREDICT biobank cohort.
 > **→ [github.com/vuhoangminh/SecureSynth-Framework](https://github.com/vuhoangminh/SecureSynth-Framework)**
+>
+> The applied work built on this framework has been accepted to *npj Digital Medicine*:
+> **"Anonymization and Visualization of Health Data and Biomarkers"**
+> Minh H. Vu, Daniel Edler, Carl Wibom, Martin Rosvall, Beatrice Melin — Umeå University
+> *(to appear)*
 
 ---
 
