@@ -4,12 +4,19 @@
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green)](https://www.python.org/downloads/release/python-390/)
 [![PyTorch 1.13](https://img.shields.io/badge/PyTorch-1.13.1-orange)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Successor: SecureSynth](https://img.shields.io/badge/Successor-SecureSynth--Framework-purple)](https://github.com/vuhoangminh/SecureSynth-Framework)
 
 Official implementation of the paper published in *Transactions on Machine Learning Research* (2026).
 
 > **Minh H. Vu, Daniel Edler, Carl Wibom, Tommy Löfstedt, Beatrice Melin, Martin Rosvall**
 > Department of Diagnostics and Intervention / Physics / Computing Science, Umeå University
 > [OpenReview](https://openreview.net/forum?id=RPZ0EW0lz0)
+
+---
+
+> **Looking for the newer work?**
+> This repository is the foundation for a follow-up paper on privacy-preserving synthetic health data. The successor framework — **SecureSynth-Framework** — extends this work with biomedical preprocessing, formal differential privacy, data-sufficiency analysis, rejection sampling, and interactive visualization, validated on the PREDICT biobank cohort.
+> **→ [github.com/vuhoangminh/SecureSynth-Framework](https://github.com/vuhoangminh/SecureSynth-Framework)**
 
 ---
 
@@ -321,6 +328,18 @@ If you use this code or framework in your research, please cite:
   issn    = {2835-8856},
   year    = {2026},
   url     = {https://openreview.net/forum?id=RPZ0EW0lz0},
+}
+```
+
+If you use the follow-up work on privacy-preserving synthesis of health data (SecureSynth-Framework), please also cite:
+
+```bibtex
+@article{vu2026b,
+  title       = {Anonymization and Visualization of Health Data and Biomarkers},
+  author      = {Vu, Minh H. and Edler, Daniel and Wibom, Carl and Rosvall, Martin and Melin, Beatrice},
+  institution = {Umeå University},
+  year        = {2026},
+  url         = {https://github.com/vuhoangminh/SecureSynth-Framework},
 }
 ```
 
